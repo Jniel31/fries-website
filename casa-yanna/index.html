@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Casa Yanna | Italian-style golden fries</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="note">Design preview. Menu items and prices are samples; ordering is not live yet.</div>
+<header><nav aria-label="Main">
+<a href="#" class="logo">Casa Yanna</a>
+<ul class="links" id="links"><li><a href="#menu">Menu</a></li><li id="navphotos" hidden><a href="#photos">Photos</a></li><li><a href="#how">How it works</a></li><li><a href="#visit">Visit</a></li></ul>
+<button class="cartbtn" id="open" aria-label="Open cart">Cart <span id="count">0</span></button>
+<button class="burger" id="burger" aria-label="Menu">&#9776;</button>
+</nav></header>
+<main>
+<section class="hero">
+<div><h1>Golden fries, <i>made slowly</i> and served hot.</h1>
+<p>Crisp patatine tossed with sea salt, herbs and cheese, the way a trattoria would do it.</p>
+<a class="btn solid" href="#menu">Order fries</a><a class="btn line" href="#how">How it works</a></div>
+<div class="arch" id="herowrap"></div>
+</section>
+<div class="band">Fritte al momento &nbsp;&middot;&nbsp; sale, erbe e formaggio</div>
+<section class="wrap" id="menu"><div class="head"><h2>Il menu</h2>
+<div class="sizes" role="group" aria-label="Size"><button aria-pressed="false" data-s="0">Piccola</button><button aria-pressed="true" data-s="1">Media</button><button aria-pressed="false" data-s="2">Grande</button></div></div>
+<ul class="grid" id="grid"></ul></section>
+<section class="wrap" id="photos" hidden><div class="head"><h2>La nostra cucina</h2></div>
+<ul class="gal" id="gal"></ul>
+</section>
+<section class="wrap" id="how"><div class="head"><h2>How it works</h2></div>
+<ol class="how"><li><b>Choose a flavor</b><span>Pick a seasoning and a size.</span></li><li><b>Fried to order</b><span>Your box is cooked when you order, not before.</span></li><li><b>Enjoy it hot</b><span>Pick-up and delivery options will be set by the shop.</span></li></ol></section>
+<section class="cta" id="visit"><div><h2>Pronto? Let's eat.</h2><a class="btn" href="#menu">Start your order</a></div></section>
+</main>
+<footer><span>&copy; 2026 Casa Yanna</span><span>Address and contact details coming soon. <button class="linkbtn" id="stafflogin">Staff login</button></span></footer>
+<div id="login" hidden><div class="box" role="dialog" aria-label="Staff login"><h3>Staff login</h3><input type="password" id="pw" placeholder="Passcode" autocomplete="off"><small>Preview only: the passcode is "yanna". This is not real security. The live site will use a proper server-side admin login.</small><div id="lerr" role="alert"></div><button class="btn solid" id="lgo" style="margin:0 8px 0 0">Sign in</button><button class="btn line" id="lcancel" style="margin:0">Cancel</button></div></div>
+<aside id="drawer" aria-label="Cart"><div class="dh"><h3>Your order</h3><button class="burger" style="display:block" id="close" aria-label="Close cart">&#10005;</button></div>
+<ul id="items"></ul><div class="total"><span>Total</span><span id="total">&#8369;0</span></div>
+<button class="btn solid" style="width:100%;margin:0" id="checkout">Checkout</button></aside>
+<div id="adminview" hidden>
+<div class="ahead"><b>Casa Yanna Admin</b><span><button class="linkbtn" id="viewsite">View site</button><button class="linkbtn" id="logout">Log out</button></span></div>
+<div class="awrap"><h2>Media</h2>
+<p class="hint">Add or replace photos here. Drag a photo onto a tile, or use its Upload button. Photos are resized and saved in this browser only. On the live website they will be uploaded to secure storage.</p>
+<h3>Page photos</h3><ul class="slots" id="slots"></ul>
+<h3 style="margin-top:40px">Gallery</h3>
+<div class="drop" id="drop" tabindex="0" role="button"><b>Drag and drop gallery photos here</b>or click to choose files.</div>
+<ul class="gal" id="agal"></ul></div>
+<input type="file" id="pick" accept="image/*" hidden></div>
+<div id="toast" role="status"></div>
+<script src="js/config.js"></script>
+<script src="js/state.js"></script>
+<script src="js/dom.js"></script>
+<script src="js/functions/addFiles.js"></script>
+<script src="js/functions/applyAdmin.js"></script>
+<script src="js/functions/box.js"></script>
+<script src="js/functions/clearOver.js"></script>
+<script src="js/functions/drawAdmin.js"></script>
+<script src="js/functions/drawGal.js"></script>
+<script src="js/functions/drawHero.js"></script>
+<script src="js/functions/openAdmin.js"></script>
+<script src="js/functions/openPick.js"></script>
+<script src="js/functions/refreshAll.js"></script>
+<script src="js/functions/render.js"></script>
+<script src="js/functions/save.js"></script>
+<script src="js/functions/shrink.js"></script>
+<script src="js/functions/sync.js"></script>
+<script src="js/functions/slug.js"></script>
+<script src="js/functions/imgTag.js"></script>
+<script src="js/functions/toast.js"></script>
+<script src="js/functions/toggleNav.js"></script>
+<script src="js/functions/tryLogin.js"></script>
+<script src="js/handlers/closeCart.js"></script>
+<script src="js/handlers/onAdminClick.js"></script>
+<script src="js/handlers/onCheckout.js"></script>
+<script src="js/handlers/onDocClick.js"></script>
+<script src="js/handlers/onDocDragOver.js"></script>
+<script src="js/handlers/onDocDrop.js"></script>
+<script src="js/handlers/onDropzoneClick.js"></script>
+<script src="js/handlers/onDropzoneKeydown.js"></script>
+<script src="js/handlers/onImageError.js"></script>
+<script src="js/handlers/onLoginCancel.js"></script>
+<script src="js/handlers/onLogout.js"></script>
+<script src="js/handlers/onPasswordKeydown.js"></script>
+<script src="js/handlers/onPickChange.js"></script>
+<script src="js/handlers/onSizeClick.js"></script>
+<script src="js/handlers/onStaffLoginClick.js"></script>
+<script src="js/handlers/onViewSite.js"></script>
+<script src="js/handlers/openCart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
